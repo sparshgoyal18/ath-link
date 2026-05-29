@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ath-Link — Book Your Turf</title>
+  <meta name="description" content="Ath-Link is India's premier sports turf booking platform. Find turfs, book slots, pay via UPI or card, and build your team." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <div class="nav-logo" onclick="navigate('home')">
+        <img src="logo.svg" alt="Ath-Link Logo" />
+        <div>
+          <div class="logo-text">Ath-Link</div>
+          <div class="logo-sub">Sports Booking</div>
+        </div>
+      </div>
+
+      <!-- Nav Links -->
+      <div class="nav-links">
+        <span class="nav-link" data-page="home"  onclick="navigate('home')">Home</span>
+        <span class="nav-link" data-page="teams" onclick="navigate('teams')">Find Teams</span>
+        <span class="nav-link" onclick="showToast('🏗️ Coming soon!')">About</span>
+      </div>
+
+      <!-- Auth / User -->
+      <div class="nav-actions" id="nav-dynamic">
+        <!-- rendered by JS -->
+      </div>
+
+      <button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- ═══ APP ROOT ═══ -->
+  <main id="app"></main>
+
+  <!-- ═══ MODAL ═══ -->
+  <div id="modal-overlay" class="modal-overlay hidden"></div>
+
+  <!-- ═══ TOAST ═══ -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function toggleMobileMenu() {
+      const existing = document.getElementById('mobile-menu');
+      if (existing) { existing.remove(); return; }
+      const isHost = typeof currentUser !== 'undefined' && currentUser?.role === 'host';
+      const menu = document.createElement('div');
+      menu.id = 'mobile-menu';
+      menu.className = 'mobile-menu';
+      menu.innerHTML = `
+        <span class="mobile-nav-link" onclick="navigate('home');this.closest('#mobile-menu').remove()">🏠 Home</span>
+        <span class="mobile-nav-link" onclick="navigate('teams');this.closest('#mobile-menu').remove()">👥 Find Teams</span>
+        ${isHost ? `<span class="mobile-nav-link" onclick="navigate('host-dashboard');this.closest('#mobile-menu').remove()">🏟️ Host Dashboard</span>` : ''}
+        <span class="mobile-nav-link" onclick="showToast('🏗️ Coming soon!')">ℹ️ About</span>
+      `;
+      document.body.appendChild(menu);
+    }
+  </script>
+
+</body>
+</html>

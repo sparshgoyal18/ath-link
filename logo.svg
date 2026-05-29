@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="44" fill="#131629"/>
+
+  <!-- Circle arc behind figures -->
+  <path d="M22 118 A82 82 0 0 1 178 118" fill="none" stroke="white" stroke-width="2.2" opacity="0.55" stroke-linecap="round"/>
+
+  <!-- Confetti dots -->
+  <circle cx="80"  cy="18" r="3.2" fill="#2196F3"/>
+  <circle cx="91"  cy="11" r="2.6" fill="#E91E63"/>
+  <circle cx="100" cy="9"  r="3.5" fill="#FF9800"/>
+  <circle cx="109" cy="11" r="2.6" fill="#00BFA5"/>
+  <circle cx="120" cy="18" r="3.2" fill="#E91E63"/>
+  <circle cx="76"  cy="26" r="2"   fill="#00BFA5" opacity="0.7"/>
+  <circle cx="124" cy="26" r="2"   fill="#FF9800" opacity="0.7"/>
+
+  <!-- Figure 1 — Blue -->
+  <circle cx="52"  cy="42" r="11.5" fill="url(#bG)"/>
+  <path d="M40 59 Q40 88 52 88 Q64 88 64 59 Q52 53 40 59Z" fill="url(#bG)"/>
+  <path d="M40 64 Q28 52 20 43" fill="none" stroke="url(#bG)" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M64 62 Q68 50 67 40" fill="none" stroke="url(#bG)" stroke-width="7.5" stroke-linecap="round"/>
+
+  <!-- Figure 2 — Pink -->
+  <circle cx="82"  cy="36" r="12.5" fill="url(#pG)"/>
+  <path d="M69 55 Q69 86 82 86 Q95 86 95 55 Q82 48 69 55Z" fill="url(#pG)"/>
+  <path d="M70 60 Q56 45 50 32" fill="none" stroke="url(#pG)" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M95 58 Q103 44 104 33" fill="none" stroke="url(#pG)" stroke-width="7.5" stroke-linecap="round"/>
+
+  <!-- Figure 3 — Orange -->
+  <circle cx="118" cy="36" r="12.5" fill="url(#oG)"/>
+  <path d="M105 55 Q105 86 118 86 Q131 86 131 55 Q118 48 105 55Z" fill="url(#oG)"/>
+  <path d="M105 58 Q97 44 96 33" fill="none" stroke="url(#oG)" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M130 60 Q144 45 150 32" fill="none" stroke="url(#oG)" stroke-width="7.5" stroke-linecap="round"/>
+
+  <!-- Figure 4 — Teal -->
+  <circle cx="148" cy="42" r="11.5" fill="url(#tG)"/>
+  <path d="M136 59 Q136 88 148 88 Q160 88 160 59 Q148 53 136 59Z" fill="url(#tG)"/>
+  <path d="M136 62 Q132 50 133 40" fill="none" stroke="url(#tG)" stroke-width="7.5" stroke-linecap="round"/>
+  <path d="M160 64 Q172 52 180 43" fill="none" stroke="url(#tG)" stroke-width="7.5" stroke-linecap="round"/>
+
+  <!-- "Ath" white text -->
+  <text x="18" y="152" font-family="Georgia,'Times New Roman',serif" font-size="44"
+        font-weight="900" font-style="italic" fill="white">Ath</text>
+
+  <!-- "-Link" gradient text -->
+  <text x="97" y="152" font-family="Georgia,'Times New Roman',serif" font-size="44"
+        font-weight="900" font-style="italic" fill="url(#lG)">-Link</text>
+
+  <!-- Pink underline arc -->
+  <path d="M97 161 Q142 177 184 160" fill="none" stroke="url(#lG)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <defs>
+    <linearGradient id="bG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64B5F6"/><stop offset="100%" stop-color="#1565C0"/>
+    </linearGradient>
+    <linearGradient id="pG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F48FB1"/><stop offset="100%" stop-color="#C2185B"/>
+    </linearGradient>
+    <linearGradient id="oG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB74D"/><stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+    <linearGradient id="tG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4DB6AC"/><stop offset="100%" stop-color="#00695C"/>
+    </linearGradient>
+    <linearGradient id="lG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9800"/><stop offset="100%" stop-color="#E91E63"/>
+    </linearGradient>
+  </defs>
+</svg>
